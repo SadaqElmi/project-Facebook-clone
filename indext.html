@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>FacebookClone</title>
+    <link rel="shortcut icon" href="facebook.png" type="image/x-icon" />
+
+    <!-- ?link css  -->
+
+    <link rel="stylesheet" href="Style.css" />
+
+    <!-- !link tailwind css  -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ??link icons  -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/e60e365223.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav
+      class="flex z-[10000] fixed shadow-lg top-0 left-0 right-0 justify-between items-center bg-white h-[55px]"
+    >
+      <!-- !!left  -->
+
+      <div class="icon-left flex items-center ml-[15px] basis-1">
+        <i class="fa-brands fa-facebook text-[42px] text-blue-500"></i>
+
+        <div class="search relative">
+          <i
+            class="fa-solid fa-magnifying-glass absolute bottom-[12px] pl-[20px] text-gray-500"
+          ></i>
+
+          <input
+            class="bg-gray-100 rounded-full py-[8px] pl-[35px] pr-[18px] shadow-sm outline-none sm:text[15px] ml-[7px] placeholder:text-gray-500"
+            placeholder="Search for anything"
+            type="text"
+            name="search"
+          />
+        </div>
+      </div>
+
+      <!--? middle  -->
+
+      <div class="icon-middle flex basis-1 items-center ml-[-90px]">
+        <div class="house cursor-pointer rounded-lg px-[53px] py-3">
+          <i
+            class="fa-solid fa-house text-[20px] text-blue-700 cursor-pointer"
+          ></i>
+        </div>
+
+        <div
+          class="tv cursor-pointer hover:bg-gray-100 rounded-lg px-[53px] py-3"
+        >
+          <i
+            class="fa-solid fa-tv text-[20px] text-gray-500 cursor-pointer"
+          ></i>
+        </div>
+
+        <div
+          class="store cursor-pointer hover:bg-gray-100 rounded-lg px-[53px] py-3"
+        >
+          <i
+            class="fa-solid fa-store text-[20px] text-gray-500 cursor-pointer"
+          ></i>
+        </div>
+
+        <div
+          class="user cursor-pointer hover:bg-gray-100 rounded-lg px-[53px] py-3"
+        >
+          <i
+            class="fa-solid fa-users text-[20px] text-gray-500 cursor-pointer"
+          ></i>
+        </div>
+
+        <div
+          class="game cursor-pointer hover:bg-gray-100 rounded-lg px-[53px] py-3"
+        >
+          <i
+            class="fa-solid fa-gamepad text-[20px] text-gray-500 cursor-pointer"
+          ></i>
+        </div>
+      </div>
+
+      <!-- !!right  -->
+
+      <div class="icon-right mr-[15px] flex items-center gap-2">
+        <div
+          class="list cursor-pointer hover:bg-gray-300 bg-gray-200 rounded-full px-[10px] py-[7px] text-center"
+        >
+          <i class="fa-solid fa-list text-[19px]"></i>
+        </div>
+
+        <div
+          class="massage cursor-pointer hover:bg-gray-300 bg-gray-200 rounded-full px-[10px] py-[7px] relative"
+        >
+          <i class="fa-brands fa-facebook-messenger text-[19px]"></i>
+
+          <div
+            class="absolute top-[-7px] pl-[6px] pt-[1px] pr-[6px] pb-[0px] right-[-4px] bg-red-500 text-white rounded-[100px] text-[12px]"
+          >
+            1
+          </div>
+        </div>
+
+        <div
+          class="bell cursor-pointer hover:bg-gray-300 bg-gray-200 rounded-full px-[12px] py-[8px] relative"
+        >
+          <i class="fa-solid fa-bell text-[19px]"></i>
+
+          <div
+            class="absolute top-[-7px] pl-[6px] pt-[1px] pr-[6px] pb-[0px] right-[-4px] bg-red-500 text-white rounded-[100px] text-[12px]"
+          >
+            3
+          </div>
+        </div>
+
+        <div class="profile">
+          <img
+            src="profile.JPG"
+            class="w-[40px] h-[40px] object-cover rounded-full hover:bg-gray-300 cursor-pointer"
+          />
+        </div>
+      </div>
+    </nav>
+
+    <!-- !! middle body  -->
+
+    <div class="container bg-gray-100 mt-[25px] flex">
+      <!-- ?side-left  -->
+
+      <section
+        class="side-left bg-gray-100 w-[24%] h-[92vh] fixed top-[9%] pt-[20px] pl-[10px] flex flex-col items-start overflow-y-scroll pb-4"
+      >
+        <!-- ?profile-left -->
+        <div
+          class="profile-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img
+            src="profile.JPG"
+            class="w-[28px] h-[28px] rounded-full object-cover"
+          />
+          <h2 class="font-[500] text-[14px]">Sadaq Elmi Abdulle</h2>
+        </div>
+
+        <!-- ? calender-left -->
+        <div
+          class="calender-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="/image/friend.png" class="w-[27px] h-[27px]" />
+          <h2 class="font-[500] text-[14px]">Saaxiibada</h2>
+        </div>
+
+        <!-- ?schedule-left -->
+        <div
+          class="schedule-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="schedule.png" class="w-[27px] h-[27px]" />
+          <h2 class="font-[500] text-[14px]">Ugu Dambeeyay</h2>
+        </div>
+
+        <!-- ? group-left  -->
+
+        <div
+          class="group-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="/image/group.png" class="w-[27px] h-[27px]" />
+          <h2 class="font-[500] text-[14px]">Kooxaha</h2>
+        </div>
+
+        <!-- ? market-left -->
+
+        <div
+          class="market-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="/image/marketplace.png" class="w-[27px] h-[27px]" />
+          <h2 class="font-[500] text-[14px]">Goobta Suuqa</h2>
+        </div>
+
+        <!-- ? watch-left -->
+
+        <div
+          class="watch-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="/image/watch.png" class="w-[27px] h-[27px]" />
+          <h2 class="font-[500] text-[14px]">Daawo</h2>
+        </div>
+
+        <!-- ? down-left -->
+
+        <div
+          class="down-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+        >
+          <img src="/image/down_arrow.png" class="w-[30px] h-[30px]" />
+          <h2 class="font-[500] text-[14px]">Wax badan arag</h2>
+        </div>
+
+        <hr class="w-[100%] bg-gray-400 h-[1px] mt-2" />
+
+        <div class="text flex gap-[53px] items-center">
+          <h2 class="text-gray-700 font-[500] text-[16px]">Your shortcuts</h2>
+          <h2
+            class="text-blue-500 cursor-pointer hover:bg-gray-200 py-1 mt-2 px-2 rounded-[5px]"
+          >
+            Wax kabadal
+          </h2>
+        </div>
+
+        <!-- !! groups-left  -->
+        <div class="shortcuts-left flex flex-col gap-1">
+          <!--? one  -->
+
+          <div
+            class="one cursor-pointer py-[9px] px-[5px] rounded-lg hover:bg-gray-200 flex gap-2"
+          >
+            <img
+              src="/image/shortcuts_1.png"
+              class="w-[27px] h-[27px] rounded-lg object-cover"
+            />
+            <h2 class="font-[500] text-[14px]">Javascript Developers</h2>
+          </div>
+
+          <!-- ? two  -->
+
+          <div
+            class="one cursor-pointer py-[9px] px-[5px] rounded-lg hover:bg-gray-200 flex gap-2"
+          >
+            <img
+              src="/image/shortcuts_3.webp"
+              class="w-[27px] h-[27px] rounded-lg object-cover"
+            />
+            <h2 class="font-[500] text-[14px]">HTML,CSS,Javascript,PHP</h2>
+          </div>
+
+          <!--? three  -->
+
+          <div
+            class="one cursor-pointer py-[9px] px-[5px] rounded-lg hover:bg-gray-200 flex gap-2"
+          >
+            <img
+              src="/image/shortcuts_4.png"
+              class="w-[27px] h-[27px] rounded-lg object-cover"
+            />
+            <h2 class="font-[500] text-[14px]">
+              Learn HTML,CSS and Javascript
+            </h2>
+          </div>
+
+          <!-- ?four  -->
+
+          <div
+            class="one cursor-pointer py-[9px] px-[5px] rounded-lg hover:bg-gray-200 flex gap-2"
+          >
+            <img
+              src="/image/shortcuts_2.jpeg"
+              class="w-[27px] h-[27px] rounded-lg object-cover"
+            />
+            <h2 class="font-[500] text-[14px]">HTML,CSS & Javascript</h2>
+          </div>
+
+          <!-- ?five  -->
+
+          <div
+            class="one py-[9px] px-[5px] rounded-lg hover:bg-gray-200 flex gap-2"
+          >
+            <img
+              src="/image/shortcuts_5.webp"
+              class="w-[27px] h-[27px] rounded-lg object-cover"
+            />
+            <h2 class="font-[500] text-[14px]">Front - End - Developer</h2>
+          </div>
+
+          <!-- ?six  -->
+
+          <div
+            class="down-left flex hover:bg-gray-200 w-[100%] py-[9px] px-[5px] rounded-lg items-center gap-3 cursor-pointer"
+          >
+            <img src="/image/down_arrow.png" class="w-[30px] h-[30px]" />
+            <h2 class="font-[500] text-[14px]">Wax badan arag</h2>
+          </div>
+        </div>
+
+        <!-- ?text-left  -->
+
+        <div class="text-left">
+          <div class="txt cursor-pointer">
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Xog-Dhowr </a
+            >&middot;
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Shuruuddaha &middot;</a
+            >
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Advertising &middot;</a
+            >
+          </div>
+          <div class="txt cursor-pointer">
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Doorashooyinka Xayaysiinta &middot;</a
+            >
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Cookies-ga &middot;</a
+            >
+          </div>
+          <div class="txt cursor-pointer">
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Dheeraad ah &middot;</a
+            >
+            <a href="#" class="text-[12px] hover:underline text-gray-500"
+              >Meta &copy; 2023</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- !!side-middle  -->
+
+      <section class="side-middle bg-gray-100 w-[50%] mt-[4%] ml-[28%]">
+        <!-- !! storys  -->
+
+        <div class="storys flex gap-2 relative">
+          <div class="image-story w-[110px] cursor-pointer h-[200px] relative">
+            <img
+              src="/profile.JPG"
+              class="object-cover h-[150px] rounded-t-xl"
+            />
+            <div
+              class="absolute bg-white rounded-b-xl shadow-lg h-[50px] left-0 right-0 bottom-0"
+            >
+              <img
+                src="/image/upload.png"
+                class="w-[40px] absolute rounded-full top-[-15px] left-8"
+              />
+              <h2 class="pt-5 pl-2 text-[13px]">sameey sheeko</h2>
+            </div>
+          </div>
+
+          <div class="image-story w-[120px] h-[200px] relative">
+            <img
+              src="/image/story_2.jpg"
+              class="object-cover h-[199px] object-cover rounded-xl"
+            />
+            <div
+              class="absolute bg-blue-500 border-4 border-blue-500 rounded-full h-[40px] w-[40px] left-1 top-3"
+            >
+              <img
+                src="/image/profile_2.jpg "
+                class="object-cover rounded-full"
+                alt=""
+              />
+            </div>
+            <h2 class="text-white bottom-1 left-2 text-[15px] absolute">
+              Moha Jamcada
+            </h2>
+          </div>
+
+          <div class="image-story w-[120px] h-[200px] relative">
+            <img
+              src="/image/story_3.jpg"
+              class="object-cover h-[199px] object-cover rounded-xl"
+            />
+            <div
+              class="absolute bg-blue-500 border-4 border-blue-500 rounded-full h-[40px] w-[40px] left-1 top-3"
+            >
+              <img
+                src="/image/profile_3.jpg "
+                class="object-cover rounded-full"
+                alt=""
+              />
+            </div>
+            <h2 class="text-white bottom-1 left-3 text-[15px] absolute">
+              Mahdi abdi
+            </h2>
+          </div>
+
+          <div class="image-story w-[120px] h-[200px] relative">
+            <img
+              src="/image/story_4.png"
+              class="object-cover h-[199px] object-cover rounded-xl"
+            />
+            <div
+              class="absolute bg-blue-500 border-4 border-blue-500 rounded-full h-[40px] w-[40px] left-1 top-3"
+            >
+              <img
+                src="/image/profile_4.png "
+                class="object-cover rounded-full"
+                alt=""
+              />
+            </div>
+            <h2 class="text-white bottom-1 left-3 text-[15px] absolute">
+              Saphaa mohamed
+            </h2>
+          </div>
+
+          <div class="image-story w-[120px] h-[200px] relative">
+            <img
+              src="/image/story_5.jpg"
+              class="object-cover h-[199px] object-cover rounded-xl"
+            />
+            <div
+              class="absolute bg-blue-500 border-4 border-blue-500 rounded-full h-[40px] w-[40px] left-1 top-3"
+            >
+              <img
+                src="/image/profile_5.png "
+                class="object-cover rounded-full"
+                alt=""
+              />
+            </div>
+            <h2 class="text-white bottom-1 left-3 text-[15px] absolute">
+              shaakal boy
+            </h2>
+          </div>
+        </div>
+
+        <!-- ?dhexda  -->
+
+        <div class="post ml-10 mt-5 mr-[50px] w-[550px]">
+          <div class="post-image bg-white w-[500px] rounded-lg px-5 py-2">
+            <div class="post-image-items flex items-center cursor-pointer mt-1">
+              <img
+                src="profile.JPG"
+                class="w-[40px] h-[40px] rounded-full"
+                alt=""
+              />
+              <input
+                class="bg-gray-100 rounded-full py-[8px] pl-[15px] w-[92%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="What's  on your mind, Sadaq?"
+                type="text"
+              />
+            </div>
+            <hr class="w-[100%] bg-red-400 h-[1px] mt-3" />
+            <div class="post-live flex items-center mt-2">
+              <div
+                class="img-items flex items-center gap-3 hover:bg-gray-100 py-2 px-2 rounded-lg cursor-pointer"
+              >
+                <i class="fa-solid fa-video text-[20px] text-blue-500"></i>
+                <p class="text-[15px] text-gray-500 font-[500]">
+                  Muuqaal toos ah
+                </p>
+              </div>
+              <div
+                class="img-items flex items-center gap-4 hover:bg-gray-100 py-2 px-2 rounded-lg cursor-pointer"
+              >
+                <i class="fa-solid fa-image text-[20px] text-green-500"></i>
+                <p class="text-[15px] text-gray-500 font-[600]">
+                  Sawir/muuqaal
+                </p>
+              </div>
+              <div
+                class="img-items flex items-center gap-4 hover:bg-gray-100 py-2 px-2 rounded-lg cursor-pointer"
+              >
+                <i class="fa-solid fa-smile text-[20px] text-yellow-500"></i>
+                <p class="text-[15px] text-gray-500 font-[600]">Dareen/howl</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- !! live-video  -->
+
+        <div
+          class="live-video w-[500px] h-[70px] bg-white ml-10 mt-3 rounded-lg flex gap-2 items-center cursor-pointer"
+        >
+          <div
+            class="live flex gap-2 items-center border-2 border-blue-100 ml-2 py-2 px-2 rounded-full"
+          >
+            <img
+              src="/image/live_video.png"
+              class="object-cover h-[15px] ml-2 w-[20px]"
+            />
+            <p class="text-blue-500 font-[600] text-[15px]">Samey Qol</p>
+          </div>
+        </div>
+
+        <!-- !! post-image -->
+
+        <div
+          class="post-image w-[500px] shadow-lg bg-white pb-3 ml-10 mt-3 rounded-lg"
+        >
+          <div
+            class="post-img-items flex justify-between pr-[14px] pl-[14px] pt-[8px]"
+          >
+            <div class="image-post flex items-center gap-2">
+              <img
+                src="/image/profile_5.png"
+                class="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <div class="post-title">
+                <h1 class="m-0 hover:underline cursor-pointer">Mahdi Abdi</h1>
+                <p
+                  class="m-0 text-[12px] text-gray-500 hover:underline cursor-pointer"
+                >
+                  4 Maalmo &middot;
+                  <i
+                    class="fa-solid fa-earth-americas ml-[2px] text-gray-500 text-[12px]"
+                  ></i>
+                </p>
+              </div>
+            </div>
+            <div class="post-icon">
+              <i
+                class="fa-solid fa-ellipsis text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+            </div>
+          </div>
+          <p class="pb-[14px] pr-[14px] pl-[14px] mt-0">
+            Developers love SkillReactor! 🚀 Join thousands of satisfied users
+            who have upskilled their coding game by working on real world
+            projects. Boost yours too! 💪
+          </p>
+          <img src="/image/post_2.jpg" />
+
+          <div class="post-row1 flex justify-between p-3">
+            <div class="post-row flex">
+              <img
+                src="/image/like.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-50"
+              />
+              <img
+                src="/image/haha.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-10"
+              />
+              <img
+                src="/image/heart.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white"
+              />
+              <p class="hover:underline cursor-pointer text-gray-600">15k</p>
+            </div>
+            <div class="post-comments flex items-center gap-1">
+              <p class="hover:underline cursor-pointer text-gray-600">1.6k</p>
+              <i class="fa-regular fa-comment text-gray-600 cursor-pointer"></i>
+              <p class="hover:underline cursor-pointer text-gray-600">100</p>
+              <i class="fa-solid fa-share text-gray-600 cursor-pointer"></i>
+            </div>
+          </div>
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <!-- !!post-likes -->
+
+          <div class="post-likes flex p-1 items-center ml-2">
+            <div
+              class="post-like cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <span>Ka hel</span>
+            </div>
+            <div
+              class="post-comment cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-comment"></i>
+              Faallo
+            </div>
+            <div
+              class="post-share cursor-pointer hover:bg-gray-100 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-share"></i>
+              <span>Wadaag</span>
+            </div>
+          </div>
+
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <p
+            class="ml-3 text-gray-600 w-[150px] text-[15px] hover:underline cursor-pointer mb-1"
+          >
+            Faallooyin badan eeg
+          </p>
+          <div class="comment-people ml-3 flex w-[190px] items-center gap-1">
+            <img
+              src="/image/profile_2.jpg"
+              class="w-[30px] h-[30px] rounded-full cursor-pointer"
+              alt=""
+            />
+            <div class="comt-title bg-gray-200 p-2 rounded-[20px]">
+              <p class="m-0 text-[15px]">Shaakal boy</p>
+              <p class="m-0 text-[13px]">nice picture</p>
+            </div>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+          <div class="answer-comt ml-[55px] mt-2 flex gap-3 items-center">
+            <span
+              class="text-gray-600 font-bold cursor-pointer text-[12px] hover:underline"
+              >Ka hel</span
+            >
+            <span
+              class="text-gray-500 font-bold cursor-pointer text-[12px] hover:underline"
+              >U jawaab</span
+            >
+            <span
+              class="text-gray-500 cursor-pointer text-[12px] hover:underline"
+              >4 saacad</span
+            >
+          </div>
+
+          <div class="your-comment mt-3 pl-3 flex items-center">
+            <div class="img-comment relative w-[30px] h-[30px]">
+              <img
+                src="profile.JPG"
+                class="w-[30px] h-[30px] rounded-full cursor-pointer"
+                alt=""
+              />
+              <img
+                src="/image/down_arrow.png"
+                class="absolute w-[12px] h-[12px] bottom-[-2px] right-0"
+                alt=""
+              />
+            </div>
+            <div class="input-comment w-[92%] relative">
+              <input
+                class="bg-gray-100 rounded-full py-[7px] pl-[15px] w-[98%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="Qor faallo dadweyne..."
+                type="text"
+              />
+              <i
+                class="fa-solid fa-camera text-gray-500 absolute text-[20px] right-[60px] top-3 cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-smile text-gray-500 text-[20px] absolute right-[30px] top-3 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- !!one-post -->
+
+        <div
+          class="post-image w-[500px] shadow-lg bg-white pb-3 ml-10 mt-3 rounded-lg"
+        >
+          <div
+            class="post-img-items flex justify-between pr-[14px] pl-[14px] pt-[8px]"
+          >
+            <div class="image-post flex items-center gap-2">
+              <img
+                src="/image/profile_3.jpg"
+                class="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <div class="post-title">
+                <h1 class="m-0 hover:underline cursor-pointer">Mahdi Abdi</h1>
+                <p
+                  class="m-0 text-[12px] text-gray-500 hover:underline cursor-pointer"
+                >
+                  4 Maalmo &middot;
+                  <i
+                    class="fa-solid fa-earth-americas ml-[2px] text-gray-500 text-[12px]"
+                  ></i>
+                </p>
+              </div>
+            </div>
+            <div class="post-icon">
+              <i
+                class="fa-solid fa-ellipsis text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+            </div>
+          </div>
+          <p class="pb-[14px] pr-[14px] pl-[14px] mt-0">
+            Developers love SkillReactor! 🚀 Join thousands of satisfied users
+            who have upskilled their coding game by working on real world
+            projects. Boost yours too! 💪
+          </p>
+          <img src="/image/post_3.png" />
+
+          <div class="post-row1 flex justify-between p-3">
+            <div class="post-row flex">
+              <img
+                src="/image/like.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-50"
+              />
+              <img
+                src="/image/haha.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-10"
+              />
+              <img
+                src="/image/heart.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white"
+              />
+              <p class="hover:underline cursor-pointer text-gray-600">15k</p>
+            </div>
+            <div class="post-comments flex items-center gap-1">
+              <p class="hover:underline cursor-pointer text-gray-600">1.6k</p>
+              <i class="fa-regular fa-comment text-gray-600 cursor-pointer"></i>
+              <p class="hover:underline cursor-pointer text-gray-600">100</p>
+              <i class="fa-solid fa-share text-gray-600 cursor-pointer"></i>
+            </div>
+          </div>
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <!-- !!post-likes -->
+
+          <div class="post-likes flex p-1 items-center ml-2">
+            <div
+              class="post-like cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <span>Ka hel</span>
+            </div>
+            <div
+              class="post-comment cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-comment"></i>
+              Faallo
+            </div>
+            <div
+              class="post-share cursor-pointer hover:bg-gray-100 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-share"></i>
+              <span>Wadaag</span>
+            </div>
+          </div>
+
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <p
+            class="ml-3 text-gray-600 w-[150px] text-[15px] hover:underline cursor-pointer mb-1"
+          >
+            Faallooyin badan eeg
+          </p>
+          <div class="comment-people ml-3 flex w-[190px] items-center gap-1">
+            <img
+              src="/image/profile_5.png"
+              class="w-[30px] h-[30px] rounded-full cursor-pointer"
+              alt=""
+            />
+            <div class="comt-title bg-gray-200 p-2 rounded-[20px]">
+              <p class="m-0 text-[15px]">Shaakal boy</p>
+              <p class="m-0 text-[13px]">nice picture</p>
+            </div>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+          <div class="answer-comt ml-[55px] mt-2 flex gap-3 items-center">
+            <span
+              class="text-gray-600 font-bold cursor-pointer text-[12px] hover:underline"
+              >Ka hel</span
+            >
+            <span
+              class="text-gray-500 font-bold cursor-pointer text-[12px] hover:underline"
+              >U jawaab</span
+            >
+            <span
+              class="text-gray-500 cursor-pointer text-[12px] hover:underline"
+              >4 saacad</span
+            >
+          </div>
+
+          <div class="your-comment mt-3 pl-3 flex items-center">
+            <div class="img-comment relative w-[30px] h-[30px]">
+              <img
+                src="profile.JPG"
+                class="w-[30px] h-[30px] rounded-full cursor-pointer"
+                alt=""
+              />
+              <img
+                src="/image/down_arrow.png"
+                class="absolute w-[12px] h-[12px] bottom-[-2px] right-0"
+                alt=""
+              />
+            </div>
+            <div class="input-comment w-[92%] relative">
+              <input
+                class="bg-gray-100 rounded-full py-[7px] pl-[15px] w-[98%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="Qor faallo dadweyne..."
+                type="text"
+              />
+              <i
+                class="fa-solid fa-camera text-gray-500 absolute text-[20px] right-[60px] top-3 cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-smile text-gray-500 text-[20px] absolute right-[30px] top-3 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- ?two-post -->
+
+        <div
+          class="post-image w-[500px] shadow-lg bg-white pb-3 ml-10 mt-3 rounded-lg"
+        >
+          <div
+            class="post-img-items flex justify-between pr-[14px] pl-[14px] pt-[8px]"
+          >
+            <div class="image-post flex items-center gap-2">
+              <img
+                src="/image/profile_4.png"
+                class="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <div class="post-title">
+                <h1 class="m-0 hover:underline cursor-pointer">Mahdi Abdi</h1>
+                <p
+                  class="m-0 text-[12px] text-gray-500 hover:underline cursor-pointer"
+                >
+                  4 Maalmo &middot;
+                  <i
+                    class="fa-solid fa-earth-americas ml-[2px] text-gray-500 text-[12px]"
+                  ></i>
+                </p>
+              </div>
+            </div>
+            <div class="post-icon">
+              <i
+                class="fa-solid fa-ellipsis text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+            </div>
+          </div>
+          <p class="pb-[14px] pr-[14px] pl-[14px] mt-0">
+            Developers love SkillReactor! 🚀 Join thousands of satisfied users
+            who have upskilled their coding game by working on real world
+            projects. Boost yours too! 💪
+          </p>
+          <img src="/image/post_4.jpg" />
+
+          <div class="post-row1 flex justify-between p-3">
+            <div class="post-row flex">
+              <img
+                src="/image/like.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-50"
+              />
+              <img
+                src="/image/haha.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-10"
+              />
+              <img
+                src="/image/heart.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white"
+              />
+              <p class="hover:underline cursor-pointer text-gray-600">15k</p>
+            </div>
+            <div class="post-comments flex items-center gap-1">
+              <p class="hover:underline cursor-pointer text-gray-600">1.6k</p>
+              <i class="fa-regular fa-comment text-gray-600 cursor-pointer"></i>
+              <p class="hover:underline cursor-pointer text-gray-600">100</p>
+              <i class="fa-solid fa-share text-gray-600 cursor-pointer"></i>
+            </div>
+          </div>
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <!-- !!post-likes -->
+
+          <div class="post-likes flex p-1 items-center ml-2">
+            <div
+              class="post-like cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <span>Ka hel</span>
+            </div>
+            <div
+              class="post-comment cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-comment"></i>
+              Faallo
+            </div>
+            <div
+              class="post-share cursor-pointer hover:bg-gray-100 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-share"></i>
+              <span>Wadaag</span>
+            </div>
+          </div>
+
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <p
+            class="ml-3 text-gray-600 w-[150px] text-[15px] hover:underline cursor-pointer mb-1"
+          >
+            Faallooyin badan eeg
+          </p>
+          <div class="comment-people ml-3 flex w-[190px] items-center gap-1">
+            <img
+              src="/image/profile_5.png"
+              class="w-[30px] h-[30px] rounded-full cursor-pointer"
+              alt=""
+            />
+            <div class="comt-title bg-gray-200 p-2 rounded-[20px]">
+              <p class="m-0 text-[15px]">Shaakal boy</p>
+              <p class="m-0 text-[13px]">nice picture</p>
+            </div>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+          <div class="answer-comt ml-[55px] mt-2 flex gap-3 items-center">
+            <span
+              class="text-gray-600 font-bold cursor-pointer text-[12px] hover:underline"
+              >Ka hel</span
+            >
+            <span
+              class="text-gray-500 font-bold cursor-pointer text-[12px] hover:underline"
+              >U jawaab</span
+            >
+            <span
+              class="text-gray-500 cursor-pointer text-[12px] hover:underline"
+              >4 saacad</span
+            >
+          </div>
+
+          <div class="your-comment mt-3 pl-3 flex items-center">
+            <div class="img-comment relative w-[30px] h-[30px]">
+              <img
+                src="profile.JPG"
+                class="w-[30px] h-[30px] rounded-full cursor-pointer"
+                alt=""
+              />
+              <img
+                src="/image/down_arrow.png"
+                class="absolute w-[12px] h-[12px] bottom-[-2px] right-0"
+                alt=""
+              />
+            </div>
+            <div class="input-comment w-[92%] relative">
+              <input
+                class="bg-gray-100 rounded-full py-[7px] pl-[15px] w-[98%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="Qor faallo dadweyne..."
+                type="text"
+              />
+              <i
+                class="fa-solid fa-camera text-gray-500 absolute text-[20px] right-[60px] top-3 cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-smile text-gray-500 text-[20px] absolute right-[30px] top-3 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <!-- ??three-post  -->
+
+        <div
+          class="post-image w-[500px] shadow-lg bg-white pb-3 ml-10 mt-3 rounded-lg"
+        >
+          <div
+            class="post-img-items flex justify-between pr-[14px] pl-[14px] pt-[8px]"
+          >
+            <div class="image-post flex items-center gap-2">
+              <img
+                src="/image/profile_6.png"
+                class="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <div class="post-title">
+                <h1 class="m-0 hover:underline cursor-pointer">Mahdi Abdi</h1>
+                <p
+                  class="m-0 text-[12px] text-gray-500 hover:underline cursor-pointer"
+                >
+                  4 Maalmo &middot;
+                  <i
+                    class="fa-solid fa-earth-americas ml-[2px] text-gray-500 text-[12px]"
+                  ></i>
+                </p>
+              </div>
+            </div>
+            <div class="post-icon">
+              <i
+                class="fa-solid fa-ellipsis text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+            </div>
+          </div>
+          <p class="pb-[14px] pr-[14px] pl-[14px] mt-0">
+            Developers love SkillReactor! 🚀 Join thousands of satisfied users
+            who have upskilled their coding game by working on real world
+            projects. Boost yours too! 💪
+          </p>
+          <img src="/image/post_3.png" />
+
+          <div class="post-row1 flex justify-between p-3">
+            <div class="post-row flex">
+              <img
+                src="/image/like.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-50"
+              />
+              <img
+                src="/image/haha.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-10"
+              />
+              <img
+                src="/image/heart.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white"
+              />
+              <p class="hover:underline cursor-pointer text-gray-600">15k</p>
+            </div>
+            <div class="post-comments flex items-center gap-1">
+              <p class="hover:underline cursor-pointer text-gray-600">1.6k</p>
+              <i class="fa-regular fa-comment text-gray-600 cursor-pointer"></i>
+              <p class="hover:underline cursor-pointer text-gray-600">100</p>
+              <i class="fa-solid fa-share text-gray-600 cursor-pointer"></i>
+            </div>
+          </div>
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <!-- !!post-likes -->
+
+          <div class="post-likes flex p-1 items-center ml-2">
+            <div
+              class="post-like cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <span>Ka hel</span>
+            </div>
+            <div
+              class="post-comment cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-comment"></i>
+              Faallo
+            </div>
+            <div
+              class="post-share cursor-pointer hover:bg-gray-100 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-share"></i>
+              <span>Wadaag</span>
+            </div>
+          </div>
+
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <p
+            class="ml-3 text-gray-600 w-[150px] text-[15px] hover:underline cursor-pointer mb-1"
+          >
+            Faallooyin badan eeg
+          </p>
+          <div class="comment-people ml-3 flex w-[190px] items-center gap-1">
+            <img
+              src="/image/profile_5.png"
+              class="w-[30px] h-[30px] rounded-full cursor-pointer"
+              alt=""
+            />
+            <div class="comt-title bg-gray-200 p-2 rounded-[20px]">
+              <p class="m-0 text-[15px]">Shaakal boy</p>
+              <p class="m-0 text-[13px]">nice picture</p>
+            </div>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+          <div class="answer-comt ml-[55px] mt-2 flex gap-3 items-center">
+            <span
+              class="text-gray-600 font-bold cursor-pointer text-[12px] hover:underline"
+              >Ka hel</span
+            >
+            <span
+              class="text-gray-500 font-bold cursor-pointer text-[12px] hover:underline"
+              >U jawaab</span
+            >
+            <span
+              class="text-gray-500 cursor-pointer text-[12px] hover:underline"
+              >4 saacad</span
+            >
+          </div>
+
+          <div class="your-comment mt-3 pl-3 flex items-center">
+            <div class="img-comment relative w-[30px] h-[30px]">
+              <img
+                src="profile.JPG"
+                class="w-[30px] h-[30px] rounded-full cursor-pointer"
+                alt=""
+              />
+              <img
+                src="/image/down_arrow.png"
+                class="absolute w-[12px] h-[12px] bottom-[-2px] right-0"
+                alt=""
+              />
+            </div>
+            <div class="input-comment w-[92%] relative">
+              <input
+                class="bg-gray-100 rounded-full py-[7px] pl-[15px] w-[98%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="Qor faallo dadweyne..."
+                type="text"
+              />
+              <i
+                class="fa-solid fa-camera text-gray-500 absolute text-[20px] right-[60px] top-3 cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-smile text-gray-500 text-[20px] absolute right-[30px] top-3 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- ?four-post  -->
+        <div
+          class="post-image w-[500px] shadow-lg bg-white pb-3 ml-10 mt-3 rounded-lg"
+        >
+          <div
+            class="post-img-items flex justify-between pr-[14px] pl-[14px] pt-[8px]"
+          >
+            <div class="image-post flex items-center gap-2">
+              <img
+                src="/image/profile_5.png"
+                class="w-[40px] h-[40px] rounded-full object-cover"
+              />
+              <div class="post-title">
+                <h1 class="m-0 hover:underline cursor-pointer">Mahdi Abdi</h1>
+                <p
+                  class="m-0 text-[12px] text-gray-500 hover:underline cursor-pointer"
+                >
+                  4 Maalmo &middot;
+                  <i
+                    class="fa-solid fa-earth-americas ml-[2px] text-gray-500 text-[12px]"
+                  ></i>
+                </p>
+              </div>
+            </div>
+            <div class="post-icon">
+              <i
+                class="fa-solid fa-ellipsis text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+              <i
+                class="fa-solid fa-xmark text-[25px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+              ></i>
+            </div>
+          </div>
+          <p class="pb-[14px] pr-[14px] pl-[14px] mt-0">
+            Developers love SkillReactor! 🚀 Join thousands of satisfied users
+            who have upskilled their coding game by working on real world
+            projects. Boost yours too! 💪
+          </p>
+          <img src="/image/post_1.jpg" />
+
+          <div class="post-row1 flex justify-between p-3">
+            <div class="post-row flex">
+              <img
+                src="/image/like.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-50"
+              />
+              <img
+                src="/image/haha.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white mr-[-5px] z-10"
+              />
+              <img
+                src="/image/heart.png"
+                class="w-[25px] h-[25px] object-cover h-[20px] border-2 rounded-full border-white"
+              />
+              <p class="hover:underline cursor-pointer text-gray-600">15k</p>
+            </div>
+            <div class="post-comments flex items-center gap-1">
+              <p class="hover:underline cursor-pointer text-gray-600">1.6k</p>
+              <i class="fa-regular fa-comment text-gray-600 cursor-pointer"></i>
+              <p class="hover:underline cursor-pointer text-gray-600">100</p>
+              <i class="fa-solid fa-share text-gray-600 cursor-pointer"></i>
+            </div>
+          </div>
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <!-- !!post-likes -->
+
+          <div class="post-likes flex p-1 items-center ml-2">
+            <div
+              class="post-like cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+              <span>Ka hel</span>
+            </div>
+            <div
+              class="post-comment cursor-pointer hover:bg-gray-100 mr-1 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-comment"></i>
+              Faallo
+            </div>
+            <div
+              class="post-share cursor-pointer hover:bg-gray-100 px-[40px] py-1 rounded-lg"
+            >
+              <i class="fa-solid fa-share"></i>
+              <span>Wadaag</span>
+            </div>
+          </div>
+
+          <hr class="w-[95%] ml-3 bg-gray-200 h-[1px] mt-1" />
+
+          <p
+            class="ml-3 text-gray-600 w-[150px] text-[15px] hover:underline cursor-pointer mb-1"
+          >
+            Faallooyin badan eeg
+          </p>
+          <div class="comment-people ml-3 flex w-[190px] items-center gap-1">
+            <img
+              src="/image/profile_5.png"
+              class="w-[30px] h-[30px] rounded-full cursor-pointer"
+              alt=""
+            />
+            <div class="comt-title bg-gray-200 p-2 rounded-[20px]">
+              <p class="m-0 text-[15px]">Shaakal boy</p>
+              <p class="m-0 text-[13px]">nice picture</p>
+            </div>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-100 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+          <div class="answer-comt ml-[55px] mt-2 flex gap-3 items-center">
+            <span
+              class="text-gray-600 font-bold cursor-pointer text-[12px] hover:underline"
+              >Ka hel</span
+            >
+            <span
+              class="text-gray-500 font-bold cursor-pointer text-[12px] hover:underline"
+              >U jawaab</span
+            >
+            <span
+              class="text-gray-500 cursor-pointer text-[12px] hover:underline"
+              >4 saacad</span
+            >
+          </div>
+
+          <div class="your-comment mt-3 pl-3 flex items-center">
+            <div class="img-comment relative w-[30px] h-[30px]">
+              <img
+                src="profile.JPG"
+                class="w-[30px] h-[30px] rounded-full cursor-pointer"
+                alt=""
+              />
+              <img
+                src="/image/down_arrow.png"
+                class="absolute w-[12px] h-[12px] bottom-[-2px] right-0"
+                alt=""
+              />
+            </div>
+            <div class="input-comment w-[92%] relative">
+              <input
+                class="bg-gray-100 rounded-full py-[7px] pl-[15px] w-[98%] shadow-sm outline-none sm:text[15px] placeholder:text-[18px] ml-[7px] placeholder:text-gray-500"
+                placeholder="Qor faallo dadweyne..."
+                type="text"
+              />
+              <i
+                class="fa-solid fa-camera text-gray-500 absolute text-[20px] right-[60px] top-3 cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-smile text-gray-500 text-[20px] absolute right-[30px] top-3 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="end flex items-center justify-center mt-10 mb-10">
+          <h1>This Only html and Css and tailwindCss</h1>
+        </div>
+      </section>
+
+      <!-- !! side-right  -->
+
+      <section
+        class="side-right bg-gray-100 w-[22%] h-[92vh] overflow-y-scroll overflow-hidden fixed top-[10%] right-0 pb-[50px]"
+      >
+        <!-- !!page-profile -->
+
+        <div class="page-profile flex flex-col gap-1">
+          <!-- ?page-title -->
+
+          <div class="page-title flex items-center justify-between">
+            <p>Your Pages and profiles</p>
+            <i
+              class="fa-solid fa-ellipsis text-[20px] cursor-pointer text-gray-500 hover:bg-gray-300 pr-[12px] pl-[12px] pt-[10px] pb-[10px] rounded-full"
+            ></i>
+          </div>
+
+          <!-- ?page-bg -->
+
+          <div
+            class="page-pg flex items-center gap-2 hover:bg-gray-300 py-2 px-2 rounded-lg cursor-pointer"
+          >
+            <img
+              src="/image/shortcuts_1.png"
+              class="w-[25px] h-[25px] rounded-full"
+              alt=""
+            />
+            <p>Graphic designer</p>
+          </div>
+
+          <!-- ?page-switch -->
+
+          <div
+            class="page-switch flex items-center ml-3 gap-2 hover:bg-gray-300 py-1 px-1 rounded-lg cursor-pointer"
+          >
+            <img src="/image/user.png" class="w-[25px] h-[25px]" alt="" />
+            <p class="text-[13px]">Switch into Page</p>
+          </div>
+
+          <!-- ?page-bell -->
+
+          <div
+            class="page-bell flex items-center ml-3 gap-2 hover:bg-gray-300 py-1 px-1 rounded-lg cursor-pointer"
+          >
+            <img src="/image/megaphone.png" class="w-[25px] h-[25px]" alt="" />
+            <p class="text-[13px]">Create promotion</p>
+          </div>
+          <hr class="w-[93%] ml-3 bg-gray-300 h-[2px] mt-1" />
+        </div>
+
+        <!-- ?codsiyo-saaxiib -->
+        <div class="codsiyo-saaxiib flex mt-1 ml-2 flex-col">
+          <!-- !!cod-sxp -->
+
+          <div class="cod-sxp w-[100%] mb-1 items-center flex gap-5">
+            <p class="text-gray-500 font-[500] cursor-pointer">
+              Codsiyo saaxiib
+            </p>
+            <p
+              class="text-[15px] cursor-pointer hover:bg-gray-300 p-1 rounded-sm text-blue-500"
+            >
+              Dhammaan arag
+            </p>
+          </div>
+
+          <!-- ?add-sxp  -->
+
+          <div
+            class="Add-sxp flex items-center hover:bg-gray-300 py-1 px-1 rounded-lg cursor-pointer"
+          >
+            <img
+              src="/image/profile_7.png"
+              class="w-[50px] h-[50px] rounded-full"
+            />
+
+            <div class="Add-text flex flex-col gap-1 items-center">
+              <div class="Add-item flex gap-3 items-center">
+                <h1 class="text-[15px] font-[500]">cabdi Raxmaan</h1>
+                <p class="text-[12px] text-gray-500">5saacad</p>
+              </div>
+              <div class="saaxiib-wadag flex items-center gap-2">
+                <img
+                  src="/image/profile_8.png"
+                  class="w-[20px] h-[20px] border-[1px] border-white rounded-full z-10"
+                />
+                <img
+                  src="/image/profile_9.png"
+                  class="w-[20px] h-[20px] border-[1px] border-white ml-[-15px] rounded-full"
+                />
+                <p class="text-gray-500 text-[12px]">15saaxiib wadaag</p>
+              </div>
+              <div class="buttom-confirm flex items-center gap-3">
+                <button class="bg-blue-500 text-white px-5 py-1 rounded-[4px]">
+                  Xaqiiji
+                </button>
+                <button
+                  class="bg-white text-black text-white font-[500] px-5 py-1 rounded-[4px]"
+                >
+                  Tirtir
+                </button>
+              </div>
+            </div>
+          </div>
+          <hr class="w-[100%] bg-gray-300 h-[2px] mt-1" />
+        </div>
+
+        <!-- !!dhalashooyinka  -->
+
+        <div class="dhalashooyinka flex flex-col gap-2">
+          <p class="text-gray-500 font-[500]">dhalashooyinka</p>
+          <div class="dhala flex items-center gap-2">
+            <img src="/image/gift.png" class="w-[30px] h-[30px]" />
+            <p class="leading-[15px]">
+              Salaado iyo
+              <span class="text-black font-[500]">17 kale</span>
+              waa maalintoodii dhalasha maanta.
+            </p>
+          </div>
+          <hr class="w-[100%] bg-gray-300 h-[2px] mt-1" />
+        </div>
+
+        <!-- ?xiriirada -->
+
+        <div class="xiriirada">
+          <!-- !xirir-icon -->
+
+          <div class="xirir-icon flex justify-between mt-1">
+            <p class="text-gray-500 font-[500]">xiriirada</p>
+            <div class="icon-xi mr-2">
+              <i
+                class="fa-solid fa-video text-gray-500 hover:bg-gray-300 pr-[8px] pl-[12px] pt-[10px] pb-[10px] rounded-full cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-magnifying-glass text-gray-500 hover:bg-gray-300 pr-[8px] pl-[12px] pt-[10px] pb-[10px] rounded-full cursor-pointer"
+              ></i>
+              <i
+                class="fa-solid fa-ellipsis text-gray-500 hover:bg-gray-300 pr-[8px] pl-[12px] pt-[10px] pb-[10px] rounded-full cursor-pointer"
+              ></i>
+            </div>
+          </div>
+
+          <!-- !!users-actives  -->
+
+          <div class="users-actives flex flex-col gap-1">
+            <!-- !!active-users  -->
+
+            <!-- ?user-1  -->
+            <div
+              class="active-users hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <div class="img-user relative">
+                <img
+                  src="/image/profile_10.png"
+                  class="w-[30px] h-[30px] rounded-full"
+                />
+                <div
+                  class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+                ></div>
+              </div>
+              <p class="font-[500]">Yaxhye Mohamed</p>
+            </div>
+
+            <!-- ?user-2  -->
+            <div
+              class="active-users hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <div class="img-user relative">
+                <img
+                  src="/image/profile_1.jpg"
+                  class="w-[30px] h-[30px] object-cover rounded-full"
+                />
+                <div
+                  class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+                ></div>
+              </div>
+              <p class="font-[500]">Mohamed Elmi Abdulle</p>
+            </div>
+
+            <!-- ?user-3  -->
+            <div
+              class="active-users hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <div class="img-user relative">
+                <img
+                  src="/image/profile_3.jpg"
+                  class="w-[30px] h-[30px] rounded-full"
+                />
+                <div
+                  class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+                ></div>
+              </div>
+              <p class="font-[500]">Abdkarim Elmi Abdulle</p>
+            </div>
+            <!-- ?user-4  -->
+
+            <div
+              class="active-users hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <div class="img-user relative">
+                <img
+                  src="/image/profile_11.png"
+                  class="w-[30px] h-[30px] rounded-full"
+                />
+                <div
+                  class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+                ></div>
+              </div>
+              <p class="font-[500]">Sakariye Matic</p>
+            </div>
+            <!-- ?user-5  -->
+            <div
+              class="active-users hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <div class="img-user relative">
+                <img
+                  src="/image/profile_9.png"
+                  class="w-[30px] h-[30px] rounded-full"
+                />
+                <div
+                  class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+                ></div>
+              </div>
+              <p class="font-[500]">Updy Naasir Ahmed</p>
+            </div>
+          </div>
+        </div>
+        <hr / class="w-[100%] bg-gray-400 h-[1px] mt-2">
+
+        <!-- !!WADAHAL-KOXEED  -->
+        <div class="WADAHAL-KOXEED">
+          <p class="text-gray-500 font-[500] p-2">WADAHAL-KOXEED</p>
+
+          <!-- ?kooxed-item  -->
+
+          <!-- ?one  -->
+
+          <div
+            class="kooxed-item flex items-center hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer gap-2"
+          >
+            <div class="img-koxeed relative w-[30px] h-[30px]">
+              <img
+                src="/image/profile_9.png"
+                class="w-[20px] h-[20px] absolute right-0 top-0 rounded-full"
+              />
+              <img
+                src="/image/profile_8.png"
+                class="w-[20px] h-[20px] absolute bottom-0 left-0 rounded-full"
+              />
+              <div
+                class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+              ></div>
+            </div>
+            <p class="font-[500] text-[14px]">Mahdi And Moha</p>
+          </div>
+
+          <!-- ?two  -->
+          <div
+            class="kooxed-item flex items-center hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer gap-2"
+          >
+            <div class="img-koxeed relative w-[30px] h-[30px]">
+              <img
+                src="/image/profile_4.png"
+                class="w-[20px] h-[20px] absolute right-0 top-0 rounded-full"
+              />
+              <img
+                src="/image/profile_5.png"
+                class="w-[20px] h-[20px] absolute bottom-0 left-0 rounded-full"
+              />
+              <div
+                class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+              ></div>
+            </div>
+            <p class="font-[500] text-[14px]">Mahdi And Moha</p>
+          </div>
+
+          <!-- ?three  -->
+
+          <div
+            class="kooxed-item flex items-center hover:bg-gray-300 px-1 py-2 rounded-lg cursor-pointer gap-2"
+          >
+            <div class="img-koxeed relative w-[30px] h-[30px]">
+              <img
+                src="/image/profile_6.png"
+                class="w-[20px] h-[20px] absolute right-0 top-0 rounded-full"
+              />
+              <img
+                src="/image/profile_7.png"
+                class="w-[20px] h-[20px] absolute bottom-0 left-0 rounded-full"
+              />
+              <div
+                class="absolute h-[10px] w-[10px] rounded-full bg-green-400 bottom-0 right-0 border-2 border-white"
+              ></div>
+            </div>
+            <p class="font-[500] text-[14px]">Mahdi And Moha</p>
+          </div>
+
+          <!-- ?four  -->
+          <div
+            class="plus flex items-center gap-2 hover:bg-gray-300 cursor-pointer px-1 py-2 rounded-lg"
+          >
+            <i class="fa-solid fa-plus bg-gray-400 px-3 py-3 rounded-full"></i>
+            <p class="font-[500] text-[14px]">Create new group</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
